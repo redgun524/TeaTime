@@ -5,6 +5,10 @@ import java.util.List;
 
 public class PhotoBook {
 
+    public final String INTENT_COVER_KEY = "Cover";
+    public final String INTENT_CONTENTS_KEY = "Contents";
+    public final String INTENT_CANCEL_KEY = "Cancel";
+
     public Cover cover;
     public List<Contents> contents_list;
     public List<Comment> comment_list;

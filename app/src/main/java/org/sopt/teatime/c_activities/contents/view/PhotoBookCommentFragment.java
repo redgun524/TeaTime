@@ -31,36 +31,21 @@ import butterknife.ButterKnife;
  */
 public class PhotoBookCommentFragment extends Fragment implements TeaTimePresenter {
 
-    @BindView(R.id.imgProfile_comment)
-    ImageView imgProfile_comment;
-    @BindView(R.id.txtTitle_comment)
-    TextView txtTitle_comment;
-    @BindView(R.id.txtAuthor_comment)
-    TextView txtAuthor_comment;
-    @BindView(R.id.imgHeart_Comment)
-    ImageView imgHeart_Comment;
-    @BindView(R.id.txtLike_Comment)
-    TextView txtLike_Comment;
-    @BindView(R.id.imgComment_Comment)
-    ImageView imgComment_Comment;
-    @BindView(R.id.txtCommentCount_Comment)
-    TextView txtCommentCount_Comment;
-    @BindView(R.id.imgScrap_Comment)
-    ImageView imgScrap_Comment;
-    @BindView(R.id.txtScrapCount_Comment)
-    TextView txtScrapCount_Comment;
-    @BindView(R.id.listView_Comment)
-    ListView listView_Comment;
-    @BindView(R.id.heartlayout_Comment)
-    LinearLayout heartlayout_Comment;
-    @BindView(R.id.scraplayout_Comment)
-    LinearLayout scraplayout_Comment;
-    @BindView(R.id.sharelayout_Comment)
-    LinearLayout sharelayout_Comment;
-    @BindView(R.id.editText_Comment)
-    EditText editText_Comment;
-    @BindView(R.id.btnCommentWrite_Comment)
-    Button btnCommentWrite_Comment;
+    @BindView(R.id.imgProfile_comment) ImageView imgProfile_comment;
+    @BindView(R.id.txtTitle_comment) TextView txtTitle_comment;
+    @BindView(R.id.txtAuthor_comment) TextView txtAuthor_comment;
+    @BindView(R.id.imgHeart_Comment) ImageView imgHeart_Comment;
+    @BindView(R.id.txtLike_Comment) TextView txtLike_Comment;
+    @BindView(R.id.imgComment_Comment) ImageView imgComment_Comment;
+    @BindView(R.id.txtCommentCount_Comment) TextView txtCommentCount_Comment;
+    @BindView(R.id.imgScrap_Comment) ImageView imgScrap_Comment;
+    @BindView(R.id.txtScrapCount_Comment) TextView txtScrapCount_Comment;
+    @BindView(R.id.listView_Comment) ListView listView_Comment;
+    @BindView(R.id.heartlayout_Comment) LinearLayout heartlayout_Comment;
+    @BindView(R.id.scraplayout_Comment) LinearLayout scraplayout_Comment;
+    @BindView(R.id.sharelayout_Comment) LinearLayout sharelayout_Comment;
+    @BindView(R.id.editText_Comment) EditText editText_Comment;
+    @BindView(R.id.btnCommentWrite_Comment) Button btnCommentWrite_Comment;
 
   PhotoBookCommentAdapter photoBookCommentAdapter;
 

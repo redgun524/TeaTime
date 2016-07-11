@@ -37,6 +37,7 @@ import org.sopt.teatime.a_others.ui.TeaTimeDialog;
 import org.sopt.teatime.a_others.ui.TeaTimeDialogListener;
 import org.sopt.teatime.a_others.ui.TeaTimeDialogOne;
 import org.sopt.teatime.b_model.domain.Cover;
+import org.sopt.teatime.b_model.domain.PhotoBook;
 import org.sopt.teatime.b_model.view_object.CoverViewObject;
 import org.sopt.teatime.c_activities.write.cover.component.FontRecyclerViewAdapter;
 import org.sopt.teatime.c_activities.write.cover.component.LayerRecyclerViewAdapter;
@@ -55,8 +56,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DrawActivity extends AppCompatActivity implements View.OnClickListener, DrawView {
-
-    private final String INTENT_COVER_KEY = "Cover2";
 
     @BindView(R.id.toolbar_Cover) Toolbar toolbar;
     @BindView(R.id.layoutBottom_draw) LinearLayout layoutBottom;
@@ -184,7 +183,7 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initTemplate() {
         Intent intent = getIntent();
-        if (intent.getParcelableExtra(INTENT_COVER_KEY) == null) {
+        if (intent.getParcelableExtra(PhotoBook.INTENT_COVER_KEY) == null) {
             View v = inflater.inflate(R.layout.template_cover_101, templateView);
             CoverTemplateId id = new CoverTemplateId(getApplicationContext(), CoverTemplateController.COVER_TEMPLETE_WHITE_1);
             viewObject = new CoverViewObject(v, id);
@@ -199,7 +198,7 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
 
             Glide.with(this).load(mImageCaptureUri).into(viewObject.imgPic);
         } else {
-            cover = (Cover)intent.getParcelableExtra(INTENT_COVER_KEY);
+            cover = intent.getParcelableExtra(PhotoBook.INTENT_COVER_KEY);
             CoverTemplateId ids = new CoverTemplateId(getApplicationContext(), cover.template_code);
             View v = inflater.inflate(ids.layoutId, templateView);
             viewObject = new CoverViewObject(v, ids);

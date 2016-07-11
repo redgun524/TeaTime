@@ -72,9 +72,6 @@ import retrofit.Retrofit;
 public class RegisterActivity extends AppCompatActivity implements RegisterView {
 
     public static final String MULTIPART_FORM_DATA = "multipart/form-data";
-    private final String INTENT_COVER_KEY = "Cover";
-    private final String INTENT_CONTENTS_KEY = "Contents";
-    private final String INTENT_CANCEL_KEY = "Cancel";
 
     @BindView(R.id.btnPage_Reg) ImageButton btnTemplate;
     @BindView(R.id.drawer_layout_Reg) DrawerLayout drawer;
@@ -187,7 +184,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
                     startActivityForResult(intent, 1);
                 } else {
                     Intent intent = new Intent(getApplicationContext(), DrawActivity.class);
-                    intent.putExtra(INTENT_COVER_KEY, cover);
+                    intent.putExtra(PhotoBook.INTENT_COVER_KEY, cover);
                     startActivityForResult(intent, 1);
                 }
             }
@@ -333,7 +330,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
             startActivityForResult(intent, 2);
         } else {
             Intent intent = new Intent(getApplicationContext(), DrawContentActivity.class);
-            intent.putExtra(INTENT_CONTENTS_KEY, contentsList.get(position));
+            intent.putExtra(PhotoBook.INTENT_CONTENTS_KEY, contentsList.get(position));
             startActivityForResult(intent, 2);
         }
     }
@@ -381,8 +378,8 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if(resultCode == 1) {
-            cover = data.getParcelableExtra(INTENT_COVER_KEY);
-            if (data.getStringExtra(INTENT_CANCEL_KEY) == null) {
+            cover = data.getParcelableExtra(PhotoBook.INTENT_COVER_KEY);
+            if (data.getStringExtra(PhotoBook.INTENT_CANCEL_KEY) == null) {
                 pagerAdapter.setCover(cover);
                 CoverTemplateId ids = new CoverTemplateId(getApplicationContext(), cover.template_code);
                 bottomCoverPreview.removeAllViews();
@@ -392,7 +389,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
             }
         }
         else if(resultCode == 2) {
-            Contents contents = data.getParcelableExtra(INTENT_CONTENTS_KEY);
+            Contents contents = data.getParcelableExtra(PhotoBook.INTENT_CONTENTS_KEY);
             if (contentsList.size() == contents.page + 1) {
                 contentsList.add(contents.page, contents);
                 contentsAdapter.notifyDataSetChanged();
