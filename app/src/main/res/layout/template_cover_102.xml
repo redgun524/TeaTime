@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgPic_cover_102"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_heightPercent="50%" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom|end"
+        android:gravity="center_vertical|end"
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="80%"
+        app:layout_marginBottomPercent="20%">
+
+        <TextView
+            android:id="@+id/txtTitle_cover_102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="제목을 입력해주세요."
+            android:textColor="@color/blackText"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtSubTitle_cover_102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle_cover_102"
+            android:layout_centerHorizontal="true"
+            android:text="부제를 입력해주세요."
+            android:textColor="@color/blackText"
+            android:textSize="18sp"
+            app:layout_marginTopPercent="8%" />
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_102_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSubTitle_cover_102"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/txtKeyword_cover_102_2"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="12sp"
+            app:layout_marginRightPercent="2%"
+            app:layout_marginTopPercent="3%" />
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_102_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSubTitle_cover_102"
+            android:layout_centerHorizontal="true"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="12sp"
+            app:layout_marginTopPercent="3%" />
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_102_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSubTitle_cover_102"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/txtKeyword_cover_102_2"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="12sp"
+            app:layout_marginLeftPercent="2%"
+            app:layout_marginTopPercent="3%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/txtAuthor_cover_102"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        app:layout_marginBottomPercent="2%"
+        android:text="by 댜니"
+        android:textColor="@color/blackText"
+        android:textSize="12sp" />
+
+</android.support.percent.PercentFrameLayout>

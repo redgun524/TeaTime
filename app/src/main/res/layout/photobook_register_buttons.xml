@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_photobook_drawing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp">
+
+    <ImageButton
+        android:id="@+id/btnPage_Reg"
+        android:layout_toLeftOf="@+id/btnCategory_Reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_page_selector"
+        android:background="@null"
+        app:layout_marginRightPercent="10%"/>
+
+    <ImageButton
+        android:id="@+id/btnCategory_Reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_category_selector"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/btnLock_Reg"
+        android:layout_toRightOf="@+id/btnCategory_Reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_lock_open_selector"
+        android:background="@null"
+        app:layout_marginLeftPercent="10%" />
+
+</android.support.percent.PercentRelativeLayout>

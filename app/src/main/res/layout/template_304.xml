@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgPic_304"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="35%"
+        app:layout_marginTopPercent="14%"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/view_cover_304"
+        android:layout_below="@+id/txtTitle_cover_304"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:layout_widthPercent="7%"
+        app:layout_heightPercent="5%"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_marginTopPercent="8%"
+        android:background="#DBDCDC"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="33%"
+        android:layout_gravity="bottom">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:alpha="0.7"/>
+
+        <TextView
+            android:id="@+id/txtExplain_304"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:text="내용을 입력하세요."
+            android:textColor="@color/white"/>
+
+    </FrameLayout>
+
+</android.support.percent.PercentFrameLayout>

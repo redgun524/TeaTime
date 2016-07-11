@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TeaTime</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--다이얼로그-->
+    <string name="dialog_btn_yes">네</string>
+    <string name="dialog_btn_no">아니요</string>
+    <string name="dialog_btn_done">확인</string>
+    <string name="loading">잠시만 기다려주세요.</string>
+    <string name="dialog_cancel_writing">수정 사항은 저장되지 않습니다.\n뒤로 가시겠습니까?</string>
+    <string name="dialog_network_err">인터넷 연결을 확인해주세요</string>
+    <string name="dialog_logout_msg">정말 로그아웃하시겠습니까?</string>
+
+    <!--카테고리 아이템-->
+    <string-array name="category">
+        <item>일상</item>
+        <item>책</item>
+        <item>육아</item>
+        <item>다이어트</item>
+        <item>여행</item>
+        <item>영화</item>
+        <item>음악</item>
+        <item>게임</item>
+        <item>패션</item>
+        <item>연애</item>
+        <item>디자인</item>
+        <item>컬쳐</item>
+    </string-array>
+
+</resources>

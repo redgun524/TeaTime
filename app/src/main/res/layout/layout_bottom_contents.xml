@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_write_desc" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutTitle_contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtTitle_contents"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_border"
+                android:gravity="start"
+                android:hint="제목을 입력하세요."
+                android:padding="5dp"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/txtSubtitle_contents"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_border"
+                android:gravity="start"
+                android:hint="부제목을 입력하세요."
+                android:padding="5dp"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtContent_contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/edit_border"
+            android:gravity="start"
+            android:hint="내용을 입력하세요."
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:textSize="10sp" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnSend_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:src="@drawable/ic_write_done" />
+</LinearLayout>

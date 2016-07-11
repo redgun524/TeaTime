@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:clickable="true"
+    android:id="@+id/rootRelative_PhotoBook"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        android:clickable="true"
+        android:id="@+id/frame_PhotoBook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+
+            android:clickable="false"
+            android:id="@+id/viewPager_PhotoBook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+        <RelativeLayout
+
+            android:id="@+id/RelativeLayout_ContentsCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50000000"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linear_ContentsCover"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/imgLike_ContentsCover"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_heart" />
+
+                <TextView
+                    android:id="@+id/txtHeart_ContentsCover"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:text="129"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/imgComment_ContentsCover"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_comment_white" />
+
+                <TextView
+                    android:id="@+id/txtCommentCount_ContentsCover"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:text="129"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/imgScrap_ContentsCover"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_scrap" />
+
+                <TextView
+                    android:id="@+id/txtScrapCount_ContentsCover"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:text="129"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/txtPageNum_PhotoBookContents"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="2/13"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+
+    </FrameLayout>
+
+</RelativeLayout>
+

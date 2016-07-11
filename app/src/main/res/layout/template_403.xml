@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentFrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="60%"
+        app:layout_heightPercent="43%"
+        app:layout_marginBottomPercent="8%"
+        android:layout_gravity="center_horizontal|center"
+        android:background="@drawable/template_border_401">
+
+        <ImageView
+            android:id="@+id/imgPic_403"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.percent.PercentFrameLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/imgPic_403"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="80%"
+        app:layout_marginTopPercent="2%">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/dot1_403"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_toLeftOf="@+id/dot2_403"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txtKeyword_403_1"
+            app:layout_marginRightPercent="3%"
+            android:background="@drawable/template_border_401"/>
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/dot2_403"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_centerHorizontal="true"
+            app:layout_marginRightPercent="3%"
+            android:background="@drawable/template_border_401"/>
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_toRightOf="@+id/dot2_403"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/template_border_401"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/imgPic_403"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_vertical"
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="80%"
+        app:layout_marginBottomPercent="10%">
+
+        <TextView
+            android:id="@+id/txtExplain_403"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="내용을 입력해주세요."
+            android:textColor="@color/blackText"
+            android:textSize="16sp"
+            app:layout_marginBottomPercent="18%"
+            android:layout_above="@+id/dot2_403"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentFrameLayout>

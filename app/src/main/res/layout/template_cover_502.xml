@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="70%"
+        app:layout_heightPercent="100%"
+        android:layout_gravity="center_horizontal"
+        android:gravity="end">
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="70%"
+            android:layout_gravity="center_horizontal"
+            app:layout_marginTopPercent="5%" >
+
+        <ImageView
+            android:id="@+id/imgPic_cover_502"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtKeyword_cover_502_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txtKeyword_cover_502_2"
+                android:layout_toStartOf="@+id/txtKeyword_cover_502_2"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="키워드1"
+                android:textColor="@color/blackText"
+                android:textSize="12sp"
+                app:layout_marginRightPercent="19%"
+                app:layout_marginTopPercent="3%"
+                app:layout_marginBottomPercent="2%" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtKeyword_cover_502_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSubTitle_cover_502"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="키워드2"
+                android:textColor="@color/blackText"
+                android:textSize="12sp"
+                app:layout_marginTopPercent="3%"
+                app:layout_marginBottomPercent="2%"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtKeyword_cover_502_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtKeyword_cover_502_2"
+                android:text="키워드3"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="@color/blackText"
+                android:textSize="12sp"
+                app:layout_marginLeftPercent="19%"
+                app:layout_marginTopPercent="3%"
+                app:layout_marginBottomPercent="2%"/>
+
+
+        </android.support.percent.PercentFrameLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_below="@+id/imgPic_cover_502"
+        app:layout_marginTopPercent="77%"
+        app:layout_marginBottomPercent="2%">
+
+        <TextView
+            android:id="@+id/txtTitle_cover_502"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="제목 입력"
+            android:textColor="@color/blackText"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtSubTitle_cover_502"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle_cover_502"
+            android:layout_alignParentRight="true"
+            android:text="부제를 입력해주세요."
+            android:textColor="@color/blackText"
+            android:textSize="18sp"
+            app:layout_marginTopPercent="8%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/txtAuthor_cover_502"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginBottomPercent="2%"
+        android:text="by 댜니"
+        android:textColor="@color/blackText"
+        android:textSize="12sp"
+        android:gravity="right"
+        app:layout_marginTopPercent="95%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentFrameLayout>

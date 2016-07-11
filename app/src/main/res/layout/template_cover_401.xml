@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="center_vertical|end"
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="80%"
+        app:layout_marginTopPercent="5%">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/dot1_cover_401"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_toLeftOf="@+id/dot2_cover_401"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txtKeyword_cover_401_1"
+            app:layout_marginRightPercent="3%"
+            android:background="@drawable/template_border_401"/>
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/dot2_cover_401"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txtKeyword_cover_401_1"
+            app:layout_marginRightPercent="3%"
+            android:background="@drawable/template_border_401"/>
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="5%"
+            app:layout_heightPercent="12%"
+            android:layout_toRightOf="@+id/dot2_cover_401"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txtKeyword_cover_401_1"
+            android:background="@drawable/template_border_401"/>
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_401_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_above="@+id/txtTitle_cover_401"
+            android:layout_toLeftOf="@+id/txtKeyword_cover_401_2"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="11sp"
+            app:layout_marginRightPercent="2%"
+            app:layout_marginTopPercent="3%" />
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_401_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtTitle_cover_401"
+            android:layout_centerHorizontal="true"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="11sp"
+            app:layout_marginTopPercent="3%" />
+
+        <TextView
+            android:id="@+id/txtKeyword_cover_401_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtTitle_cover_401"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/txtKeyword_cover_401_2"
+            android:text="키워드1"
+            android:textColor="@color/blackText"
+            android:textSize="11sp"
+            app:layout_marginLeftPercent="2%"
+            app:layout_marginTopPercent="3%" />
+
+        <TextView
+            android:id="@+id/txtTitle_cover_401"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="제목을 입력해주세요."
+            app:layout_marginTopPercent="10%"
+            android:textColor="@color/blackText"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/txtSubTitle_cover_401"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle_cover_401"
+            android:layout_centerHorizontal="true"
+            android:text="부제를 입력해주세요."
+            android:textColor="@color/blackText"
+            android:textSize="16sp"
+            app:layout_marginTopPercent="8%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentFrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="60%"
+        app:layout_heightPercent="43%"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/template_border_401">
+
+        <ImageView
+            android:id="@+id/imgPic_cover_401"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+    </android.support.percent.PercentFrameLayout>
+
+
+    <TextView
+        android:id="@+id/txtAuthor_cover_401"
+        android:layout_below="@+id/txtKeyword_cover_401_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:layout_marginBottomPercent="2%"
+        android:text="by 댜니"
+        android:textColor="@color/blackText"
+        android:textSize="12sp" />
+
+</android.support.percent.PercentFrameLayout>

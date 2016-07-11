@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_photobook_drawing"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp">
+
+    <ImageButton
+        android:id="@+id/btnContent_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_desc"
+        android:background="@null"
+        android:layout_gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/btnTitle_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_content_selector"
+        android:background="@null"
+        android:layout_gravity="center" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnLayer_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_template_selector"
+        android:layout_margin="3dp"
+        android:background="@null"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/btnPicture_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_image_selector"
+        android:layout_margin="3dp"
+        android:background="@null"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/btnFont_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_font_selector"
+        android:layout_margin="3dp"
+        android:background="@null"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/btnFontSize_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_font_size_selector"
+        android:layout_margin="3dp"
+        android:background="@null"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/btnFontColor_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_font_color_selector"
+        android:layout_margin="3dp"
+        android:background="@null"
+        android:layout_gravity="center" />
+
+</LinearLayout>

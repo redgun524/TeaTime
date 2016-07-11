@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="100%"
+        android:layout_gravity="bottom">
+
+
+        <ImageView
+            android:id="@+id/imgPic_303"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="35%"
+            app:layout_marginTopPercent="14%"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"/>
+
+
+            <View
+                android:id="@+id/view1_303"
+                android:layout_below="@+id/imgPic_303"
+                android:layout_gravity="left"
+                app:layout_widthPercent="4%"
+                app:layout_heightPercent="3%"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#DBDCDC"
+                app:layout_marginTopPercent="5%"
+                android:layout_toLeftOf="@+id/view2_303"
+                android:layout_toStartOf="@+id/view2_303"/>
+
+            <View
+                android:id="@+id/view2_303"
+                android:layout_below="@+id/imgPic_303"
+                android:layout_gravity="right"
+                app:layout_widthPercent="4%"
+                app:layout_heightPercent="3%"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#DBDCDC"
+                app:layout_marginLeftPercent="2%"
+                app:layout_marginTopPercent="5%"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/view3_303"
+                android:layout_below="@+id/imgPic_303"
+                android:layout_gravity="right"
+                app:layout_widthPercent="4%"
+                app:layout_heightPercent="3%"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#DBDCDC"
+                app:layout_marginLeftPercent="2%"
+                app:layout_marginTopPercent="5%"
+                android:layout_toRightOf="@+id/view2_303" />
+
+
+        <TextView
+            android:layout_below="@+id/view1_303"
+            android:id="@+id/txtExplain_303"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내용을 입력하세요."
+            android:textColor="@color/blackText"
+            android:textSize="16sp"
+            app:layout_marginTopPercent="5%"
+            android:layout_centerHorizontal="true" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentFrameLayout>
