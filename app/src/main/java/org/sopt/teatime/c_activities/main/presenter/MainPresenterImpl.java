@@ -1,6 +1,6 @@
 package org.sopt.teatime.c_activities.main.presenter;
 
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.network.PhotoBookModel;
 import org.sopt.teatime.c_activities.main.view.mPhotoCardView;

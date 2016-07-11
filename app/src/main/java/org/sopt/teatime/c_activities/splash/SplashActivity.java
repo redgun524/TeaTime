@@ -7,7 +7,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 
 import org.sopt.teatime.R;
-import org.sopt.teatime.a_others.ApplicationController;
+import org.sopt.teatime.a_others.network.ApplicationController;
 import org.sopt.teatime.c_activities.main.view.MainActivity;
 
 import java.lang.ref.WeakReference;

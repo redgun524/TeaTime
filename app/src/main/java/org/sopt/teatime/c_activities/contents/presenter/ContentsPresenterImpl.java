@@ -2,7 +2,7 @@ package org.sopt.teatime.c_activities.contents.presenter;
 
 import android.util.Log;
 
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Contents;
 import org.sopt.teatime.b_model.network.ContentsModel;
 import org.sopt.teatime.c_activities.contents.view.mContentsView;

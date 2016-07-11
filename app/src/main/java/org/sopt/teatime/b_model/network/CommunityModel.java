@@ -2,9 +2,9 @@ package org.sopt.teatime.b_model.network;
 
 import android.util.Log;
 
-import org.sopt.teatime.a_others.ApplicationController;
-import org.sopt.teatime.a_others.NetworkService;
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.network.ApplicationController;
+import org.sopt.teatime.a_others.network.NetworkService;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Comment;
 import org.sopt.teatime.b_model.domain.Like;
 import org.sopt.teatime.b_model.domain.Scrap;

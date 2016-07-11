@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.sopt.teatime.R;
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Comment;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.network.CommunityModel;

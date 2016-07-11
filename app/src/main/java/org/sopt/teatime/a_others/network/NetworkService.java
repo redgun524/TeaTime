@@ -1,4 +1,4 @@
-package org.sopt.teatime.a_others;
+package org.sopt.teatime.a_others.network;
 
 import com.squareup.okhttp.RequestBody;
 

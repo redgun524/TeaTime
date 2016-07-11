@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import org.sopt.teatime.R;
-import org.sopt.teatime.a_others.ApplicationController;
+import org.sopt.teatime.a_others.network.ApplicationController;
 import org.sopt.teatime.a_others.function.FontController;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.c_activities.write.cover.model.CoverTemplateId;

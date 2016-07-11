@@ -32,10 +32,10 @@ import com.bumptech.glide.Glide;
 
 import org.sopt.teatime.R;
 import org.sopt.teatime.a_others.function.CoverTemplateController;
+import org.sopt.teatime.a_others.function.DialogController;
 import org.sopt.teatime.a_others.function.FontController;
 import org.sopt.teatime.a_others.ui.TeaTimeDialog;
 import org.sopt.teatime.a_others.ui.TeaTimeDialogListener;
-import org.sopt.teatime.a_others.ui.TeaTimeDialogOne;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.domain.PhotoBook;
 import org.sopt.teatime.b_model.view_object.CoverViewObject;
@@ -315,38 +315,12 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
     @OnClick(R.id.btnDone_Cover)
     void setBtnDone() {
         if (TextUtils.isEmpty(cover.title) || TextUtils.isEmpty(cover.subtitle)) {
-            final TeaTimeDialogOne dialog = new TeaTimeDialogOne(this);
-            dialog.setMessage("제목, 부제를 입력해주세요.");
-            dialog.setOnTeaTimeDialogClickListener(new TeaTimeDialogListener() {
-                @Override
-                public void clickYes() {
-                    dialog.dismiss();
-                }
-
-                @Override
-                public void clickNo() {
-
-                }
-            });
-            dialog.show();
+            DialogController.showTextNullDialog(this);
         } else if (cover.url == null) {
-            final TeaTimeDialogOne dialog = new TeaTimeDialogOne(this);
-            dialog.setMessage("사진을 넣어주세요.");
-            dialog.setOnTeaTimeDialogClickListener(new TeaTimeDialogListener() {
-                @Override
-                public void clickYes() {
-                    dialog.dismiss();
-                }
-
-                @Override
-                public void clickNo() {
-
-                }
-            });
-            dialog.show();
+            DialogController.showPhotoNullDialog(this);
         } else {
             Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-            intent.putExtra("Cover", cover);
+            intent.putExtra(PhotoBook.INTENT_COVER_KEY, cover);
             setResult(1, intent);
             finish();
         }
@@ -375,7 +349,7 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
             public void clickYes() {
                 dialog.dismiss();
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-                intent.putExtra("Cancel", "Cancel");
+                intent.putExtra(PhotoBook.INTENT_CANCEL_KEY, PhotoBook.INTENT_CANCEL_KEY);
                 setResult(1, intent);
                 finish();
             }

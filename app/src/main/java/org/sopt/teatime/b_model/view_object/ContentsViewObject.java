@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.sopt.teatime.a_others.ApplicationController;
+import org.sopt.teatime.a_others.network.ApplicationController;
 import org.sopt.teatime.b_model.domain.Contents;
 import org.sopt.teatime.c_activities.write.content.model.ContentTemplateIds;
 

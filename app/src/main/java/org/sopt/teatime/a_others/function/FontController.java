@@ -3,7 +3,7 @@ package org.sopt.teatime.a_others.function;
 import android.graphics.Typeface;
 
 import org.sopt.teatime.R;
-import org.sopt.teatime.a_others.ApplicationController;
+import org.sopt.teatime.a_others.network.ApplicationController;
 
 public class FontController {
     //나눔 : 100

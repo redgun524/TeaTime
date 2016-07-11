@@ -1,8 +1,6 @@
 package org.sopt.teatime.c_activities.scrap.Presenter;
 
-import android.util.Log;
-
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.network.UserContentsModel;
 import org.sopt.teatime.c_activities.scrap.view.ScrapbookView;

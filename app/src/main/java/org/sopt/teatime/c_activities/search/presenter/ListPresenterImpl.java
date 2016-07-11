@@ -1,6 +1,6 @@
 package org.sopt.teatime.c_activities.search.presenter;
 
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.network.UserContentsModel;
 import org.sopt.teatime.c_activities.search.view.SearchView;

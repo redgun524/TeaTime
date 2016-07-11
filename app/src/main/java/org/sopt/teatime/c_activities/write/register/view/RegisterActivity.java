@@ -33,8 +33,8 @@ import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;
 
 import org.sopt.teatime.R;
-import org.sopt.teatime.a_others.ApplicationController;
-import org.sopt.teatime.a_others.NetworkService;
+import org.sopt.teatime.a_others.network.ApplicationController;
+import org.sopt.teatime.a_others.network.NetworkService;
 import org.sopt.teatime.a_others.function.DialogController;
 import org.sopt.teatime.a_others.function.FontController;
 import org.sopt.teatime.a_others.ui.LoadingDialog;

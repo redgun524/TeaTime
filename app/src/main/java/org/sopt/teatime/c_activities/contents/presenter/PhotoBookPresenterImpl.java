@@ -2,7 +2,7 @@ package org.sopt.teatime.c_activities.contents.presenter;
 
 import android.util.Log;
 
-import org.sopt.teatime.a_others.TeaTimePresenter;
+import org.sopt.teatime.a_others.function.TeaTimePresenter;
 import org.sopt.teatime.b_model.domain.PhotoBook;
 import org.sopt.teatime.b_model.network.PhotoBookModel;
 import org.sopt.teatime.c_activities.main.view.mPhotoBookView;
