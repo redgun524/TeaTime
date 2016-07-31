@@ -23,6 +23,7 @@ public class PhotoBookModel {
         this.presenter = presenter;
     }
 
+    //포토북 리스트 받아오기
     public void getPhotoBookListFromServer(){
         Call<List<Cover>> callCoverList = networkService.getCoverList();
         callCoverList.enqueue(new Callback<List<Cover>>() {
@@ -38,6 +39,7 @@ public class PhotoBookModel {
         });
     }
 
+    //포토북 하나 가져오기
     public void getPhotoBookFromServer() {
         Call<PhotoBook> callPhotoBook = networkService.getPhotoBook(17);
         callPhotoBook.enqueue(new Callback<PhotoBook>() {

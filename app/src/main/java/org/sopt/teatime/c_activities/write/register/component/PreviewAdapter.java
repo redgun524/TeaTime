@@ -1,6 +1,5 @@
 package org.sopt.teatime.c_activities.write.register.component;
 
-import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -16,9 +15,7 @@ import java.util.ArrayList;
 public class PreviewAdapter extends FragmentPagerAdapter {
 
     ArrayList<Contents> contentList;
-    ArrayList<Typeface> typefaces;
     Cover cover;
-    private PreviewTypefaceImpl previewTypeface;
 
     public PreviewAdapter(FragmentManager fm) {
         super(fm);

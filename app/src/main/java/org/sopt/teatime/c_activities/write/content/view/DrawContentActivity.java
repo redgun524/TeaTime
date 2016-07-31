@@ -37,6 +37,7 @@ import org.sopt.teatime.a_others.ui.TeaTimeDialog;
 import org.sopt.teatime.a_others.ui.TeaTimeDialogListener;
 import org.sopt.teatime.a_others.ui.TeaTimeDialogOne;
 import org.sopt.teatime.b_model.domain.Contents;
+import org.sopt.teatime.b_model.domain.PhotoBook;
 import org.sopt.teatime.c_activities.write.content.component.ContentLayerRecyclerViewAdapter;
 import org.sopt.teatime.c_activities.write.content.model.ContentTemplateIds;
 import org.sopt.teatime.c_activities.write.content.model.ContentTemplateViewItem;
@@ -167,16 +168,17 @@ public class DrawContentActivity extends AppCompatActivity implements View.OnCli
 
     private void initTemplate() {
         Intent intent = getIntent();
-        if (intent.getParcelableExtra("Contents") == null) {
+        Contents receivedContents = intent.getParcelableExtra(PhotoBook.INTENT_CONTENTS_KEY);
+        if (receivedContents == null) {
             View v = inflater.inflate(R.layout.template_101, templateView);
             viewItem = new ContentTemplateViewItem();
             ContentTemplateIds id = new ContentTemplateIds(getApplicationContext(), ContentTemplateController.TEMPLETE_BLACK_1);
             viewItem.imgPicture = (ImageView)v.findViewById(id.imgPicId);
             viewItem.txtDesc = (TextView)v.findViewById(id.txtDescId);
             contents.template_code = ContentTemplateController.TEMPLETE_BLACK_1;
-            contents.page = intent.getIntExtra("position", 0);
+            contents.page = intent.getIntExtra("page", 0);
         } else {
-            contents = intent.getParcelableExtra("Contents");
+            contents = receivedContents;
             ContentTemplateIds ids = new ContentTemplateIds(getApplicationContext(), contents.template_code);
             View v = inflater.inflate(ids.layoutId, templateView);
             viewItem = new ContentTemplateViewItem();

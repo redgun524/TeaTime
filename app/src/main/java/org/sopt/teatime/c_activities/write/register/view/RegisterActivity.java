@@ -167,6 +167,8 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
 
     private void initBottomLayout() {
         layoutBottom.removeAllViews();
+
+        ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE)).inflate(R.layout.layout_bottom_template, layoutBottom, true);
         recyclerViewContents = (RecyclerView) layoutBottom.findViewById(R.id.recyclerView_template);
         bottomCoverPreview = (FrameLayout)layoutBottom.findViewById(R.id.frameLayout_template);
         ImageView imageView = new ImageView(getApplicationContext());
@@ -324,13 +326,14 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     }
 
     @Override
-    public void setContentTemplate(int position, Contents contents) {
-        if (contentsList.size() == position + 1) {
+    public void setContentTemplate(int page, Contents contents) {
+        if (contentsList.size() == page) {
             Intent intent = new Intent(getApplicationContext(), DrawContentActivity.class);
+            intent.putExtra("page", page);
             startActivityForResult(intent, 2);
         } else {
             Intent intent = new Intent(getApplicationContext(), DrawContentActivity.class);
-            intent.putExtra(PhotoBook.INTENT_CONTENTS_KEY, contentsList.get(position));
+            intent.putExtra(PhotoBook.INTENT_CONTENTS_KEY, contentsList.get(page - 1));
             startActivityForResult(intent, 2);
         }
     }
@@ -361,13 +364,10 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
                 writer.write(bytes);
                 stream.close();
                 writer.close();
-                Log.i("MyTag", "길이 : "+ bytes.length);
                 RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
-                Log.i("MyTag", ""+requestBody.contentLength());
                 return requestBody;
             }
         } catch (IOException e) {
-            Log.i("MyTag", e.getMessage());
             e.printStackTrace();
 
         }
@@ -390,13 +390,17 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         }
         else if(resultCode == 2) {
             Contents contents = data.getParcelableExtra(PhotoBook.INTENT_CONTENTS_KEY);
-            if (contentsList.size() == contents.page + 1) {
-                contentsList.add(contents.page, contents);
+            Log.i("MyTag", "size : "+contentsList.size());
+            Log.i("MyTag", "page : "+contents.page);
+            int lastPage = contentsList.size();
+            int index = contents.page - 1;
+            if (lastPage == contents.page) {
+                contentsList.add(index, contents);
                 contentsAdapter.notifyDataSetChanged();
                 pagerAdapter.appendContents(contents);
             } else {
-                contentsList.set(contents.page, contents);
-                contentsAdapter.replaceContent(contents, contents.page);
+                contentsList.set(index, contents);
+                contentsAdapter.notifyDataSetChanged();
                 pagerAdapter.replaceContents(contents, contents.page);
             }
         }

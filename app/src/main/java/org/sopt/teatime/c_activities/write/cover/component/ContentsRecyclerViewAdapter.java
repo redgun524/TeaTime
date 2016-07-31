@@ -41,7 +41,7 @@ public class ContentsRecyclerViewAdapter extends RecyclerView.Adapter<ContentsRe
     }
 
     public void appendContent(Contents contents) {
-        items.add(items.size() - 1, contents);
+        items.add(contents.page - 1, contents);
         notifyDataSetChanged();
     }
 
@@ -63,21 +63,24 @@ public class ContentsRecyclerViewAdapter extends RecyclerView.Adapter<ContentsRe
     //this method is called when user scroll and set items of RecyclerView
     @Override
     public void onBindViewHolder(final ContentsRecyclerViewAdapter.ViewHolder holder, final int position) {
-        Log.i("MyTag", ""+position);
-        Log.i("MyTag", ""+items.size());
         LayoutInflater inflater = LayoutInflater.from(context);
-        if (position + 1 == items.size()) {
+        final int pageNum = position + 1; // 콘텐츠 페이지
+        int lastPage = items.size(); //아직 추가될 마지막 페이지(이미 1개의 콘텐츠가 있으면 lastPage = 2)
+        Log.i("MyTag", "lastPage : " + lastPage);
+        if (pageNum == lastPage) {
             View v = inflater.inflate(R.layout.item_image_only, holder.view);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    registerView.setContentTemplate(position, items.get(position));
+                    registerView.setContentTemplate(pageNum, items.get(position));
                 }
             });
         } else {
             final Contents content = items.get(position);
+            Log.i("MyTag", "템플릿 코드 : " + content.template_code);
             final ContentTemplateIds ids = new ContentTemplateIds(context, content.template_code);
             holder.view.removeAllViews();
+            Log.i("MyTag", "" + ids.layoutId);
             View v = inflater.inflate(ids.layoutId, holder.view);
             ImageView imgPic = (ImageView)v.findViewById(ids.imgPicId);
             TextView txtDesc = (TextView)v.findViewById(ids.txtDescId);
@@ -85,14 +88,14 @@ public class ContentsRecyclerViewAdapter extends RecyclerView.Adapter<ContentsRe
                     .load(content.url)
                     .into(imgPic);
             txtDesc.setText(content.description);
-            Float ratio = Float.parseFloat(""+0.2);
+            Float ratio = Float.parseFloat("0.2");
             Float descFontSize = txtDesc.getTextSize() * ratio;
             txtDesc.setTextSize(TypedValue.COMPLEX_UNIT_PX, descFontSize);
-            content.page = position;
+            content.page = pageNum;
             holder.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    registerView.setContentTemplate(position, content);
+                    registerView.setContentTemplate(pageNum, content);
                 }
             });
         }

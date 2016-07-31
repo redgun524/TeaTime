@@ -50,7 +50,7 @@ public class PreviewContentFragment extends Fragment implements View.OnClickList
         View v =inflater.inflate(ids.layoutId, frameLayout);
 
         ContentsViewObject contentsView = new ContentsViewObject(v, ids);
-        contentsView.setContentsDatas(getActivity(), contents, "0,7");
+        contentsView.setContentsDatas(getActivity(), contents, "0.7");
 
         return rootView;
     }

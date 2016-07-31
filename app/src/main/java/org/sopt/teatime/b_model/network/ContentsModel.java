@@ -17,7 +17,6 @@ import retrofit.Retrofit;
  */
 public class ContentsModel {
 
-
     NetworkService networkService;
     TeaTimePresenter presenter;
 
@@ -26,6 +25,7 @@ public class ContentsModel {
         this.presenter = presenter;
     }
 
+    //콘텐츠들 받아오기
     public void getContentsListFromServer(){
         Call<List<Contents>> callContentsList = networkService.getContentsList();
         callContentsList.enqueue(new Callback<List<Contents>>() {

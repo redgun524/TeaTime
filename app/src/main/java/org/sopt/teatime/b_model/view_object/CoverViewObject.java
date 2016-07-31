@@ -2,6 +2,7 @@ package org.sopt.teatime.b_model.view_object;
 
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,8 +10,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.sopt.teatime.a_others.network.ApplicationController;
 import org.sopt.teatime.a_others.function.FontController;
+import org.sopt.teatime.a_others.network.ApplicationController;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.c_activities.write.cover.model.CoverTemplateId;
 
@@ -43,7 +44,7 @@ public class CoverViewObject {
     public void setCoverDatas(Context ctx, Cover cover, String ratio) {
 
         this.cover = cover;
-
+        Log.i("MyTag", "ratio : " + ratio);
         setDatas(ctx);
         setTextSizes(ratio);
         setTextColors(ctx);
