@@ -3,6 +3,7 @@ package org.sopt.teatime.c_activities.write.register.component;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import org.sopt.teatime.b_model.domain.Contents;
 import org.sopt.teatime.b_model.domain.Cover;
@@ -23,6 +24,7 @@ public class PreviewAdapter extends FragmentPagerAdapter {
     }
 
     public void setCover(Cover cover) {
+        Log.i("MyTag", "setCover 실행");
         this.cover = cover;
         notifyDataSetChanged();
     }
@@ -44,6 +46,7 @@ public class PreviewAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        Log.i("MyTag", "실행되나 함 보자");
         if (cover !=null) {
             if (position == 0) {
                 return PreviewCoverFragment.init(cover);

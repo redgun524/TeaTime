@@ -343,7 +343,7 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
         final TeaTimeDialog dialog = new TeaTimeDialog(this);
-        dialog.setMessage("");
+        dialog.setMessage("수정 사항은 저장되지 않습니다.\n" + "뒤로 가시겠습니까?");
         dialog.setOnTeaTimeDialogClickListener(new TeaTimeDialogListener() {
             @Override
             public void clickYes() {

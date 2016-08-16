@@ -38,6 +38,8 @@ import org.sopt.teatime.a_others.network.NetworkService;
 import org.sopt.teatime.a_others.function.DialogController;
 import org.sopt.teatime.a_others.function.FontController;
 import org.sopt.teatime.a_others.ui.LoadingDialog;
+import org.sopt.teatime.a_others.ui.TeaTimeDialog;
+import org.sopt.teatime.a_others.ui.TeaTimeDialogListener;
 import org.sopt.teatime.b_model.domain.Contents;
 import org.sopt.teatime.b_model.domain.Cover;
 import org.sopt.teatime.b_model.domain.PhotoBook;
@@ -207,17 +209,6 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
 
     @Override
     public void setCategory(String category) {
-
-    }
-
-    @Override
-    public void cancelCategory(String category) {
-
-    }
-
-    /*
-    @Override
-    public void setCategory(String category) {
         if (cover.key1 == null) {
             cover.key1 = category;
         } else if (cover.key2 == null) {
@@ -236,7 +227,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         } else if (cover.key1 != null) {
             cover.key1 = null;
         }
-    }*/
+    }
 
     public void initRecyclerViewContents()
     {
@@ -321,7 +312,24 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            DialogController.showCancelWritingDialog(this);
+            final TeaTimeDialog dialog = new TeaTimeDialog(this);
+            dialog.setMessage("");
+            dialog.setOnTeaTimeDialogClickListener(new TeaTimeDialogListener() {
+                @Override
+                public void clickYes() {
+                    dialog.dismiss();
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+                @Override
+                public void clickNo() {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
         }
     }
 
@@ -390,8 +398,6 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         }
         else if(resultCode == 2) {
             Contents contents = data.getParcelableExtra(PhotoBook.INTENT_CONTENTS_KEY);
-            Log.i("MyTag", "size : "+contentsList.size());
-            Log.i("MyTag", "page : "+contents.page);
             int lastPage = contentsList.size();
             int index = contents.page - 1;
             if (lastPage == contents.page) {
